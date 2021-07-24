@@ -1,0 +1,27 @@
+{
+  "name": "uniquerand",
+  "version": "0.0.1",
+  "description": "Generate unique random numbers.",
+  "main": "uniqueRand.js",
+  "devDependencies": {
+    "jasmine": "^3.4.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/k50/unique-random-numbers.git"
+  },
+  "keywords": [
+    "unique",
+    "random",
+    "numbers"
+  ],
+  "author": "keansum@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/k50/unique-random-numbers/issues"
+  },
+  "homepage": "https://gitlab.com/k50/unique-random-numbers#readme"
+}
