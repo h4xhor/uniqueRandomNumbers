@@ -4,6 +4,7 @@
   "description": "Generate unique random numbers.",
   "main": "uniqueRand.js",
   "devDependencies": {
+    "@types/node": "^16.7.1",
     "jasmine": "^3.4.0"
   },
   "scripts": {
