@@ -26,24 +26,25 @@ var UniqueRand = /** @class */ (function () {
             arr.push(rand);
         }
     };
-    UniqueRand.prototype.getRandArr = function (min, max) {
+    UniqueRand.prototype.getRandArr = function (min, max, count) {
         var arr = [];
         if (min > max) {
         }
         else {
-            console.log("b4 min = " + min + ", max = " + max);
             min = Math.floor(min);
             max = Math.ceil(max);
-            console.log("after min = " + min + ", max = " + max);
             var universe = [];
             var range = max - min + 1;
+            if (typeof count === "undefined") {
+                count = range;
+            }
             for (var i = 0; i < range; i++) {
                 universe.push(i);
             }
-            for (var i = 0; i < range; i++) {
+            for (var i = 0; i < count; i++) {
                 this.getUniqueRand(arr, universe, range);
             }
-            for (var i = 0; i < range; i++) {
+            for (var i = 0; i < count; i++) {
                 arr[i] += min;
             }
         }

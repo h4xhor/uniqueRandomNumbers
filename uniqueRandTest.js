@@ -25,9 +25,15 @@ function isUnique(arr, min, max) {
     }
     console.log(ok ? '  Passed' : '  Failed');
 }
-function runSingleTest(min, max) {
+function runSingleTest(min, max, count) {
+    if (typeof count === "undefined") {
+        var min2 = Math.floor(min);
+        var max2 = Math.ceil(max);
+        var range = max2 - min2 + 1;
+        count = range;
+    }
     var uniqueRandObj = new UniqueRand();
-    var arr = uniqueRandObj.getRandArr(min, max);
+    var arr = uniqueRandObj.getRandArr(min, max, count);
     console.log('final arr = ' + arr);
     isUnique(arr, min, max);
 }
@@ -42,5 +48,12 @@ function testRand() {
     runSingleTest(-5, 8);
     runSingleTest(1, 15);
     runSingleTest(5, 95);
+    runSingleTest(0, 10, 5);
+    runSingleTest(0.2, 9.3, 5);
+    runSingleTest(-0.2, 9.3, 5);
+    runSingleTest(-20.2, -9.3, 5);
+    runSingleTest(-5, 8, 5);
+    runSingleTest(1, 15, 6);
+    runSingleTest(5, 95, 8);
 }
 testRand();

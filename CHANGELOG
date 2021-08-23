@@ -1,2 +1,5 @@
+v1.0.1 2021.8.24
+- Added count argument. 
+
 v1.0.0 2021.8.24
 - Converted to TypeScript.

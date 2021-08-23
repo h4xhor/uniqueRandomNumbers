@@ -26,7 +26,7 @@ export class UniqueRand {
     }
   }
 
-  getRandArr(min: number, max: number) {
+  getRandArr(min: number, max: number, count?: number) {
     
     let arr = [];
 
@@ -34,24 +34,26 @@ export class UniqueRand {
 
     } else {
 
-      console.log(`b4 min = ${min}, max = ${max}`);
       min = Math.floor(min);
       max = Math.ceil(max);
-      console.log(`after min = ${min}, max = ${max}`);
 
       let universe = [];
 
       let range = max - min + 1;
 
+      if (typeof count === "undefined") {
+        count = range;
+      }
+
       for (let i = 0; i < range; i++) {
         universe.push(i); 
       }
 
-      for (let i = 0; i < range; i++) {
+      for (let i = 0; i < count; i++) {
         this.getUniqueRand(arr, universe, range);
       }
 
-      for (let i = 0; i < range; i++) {
+      for (let i = 0; i < count; i++) {
         arr[i] += min;
       }
     }

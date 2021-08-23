@@ -44,6 +44,17 @@ max = 10
 
 sample output: 8,0,10,3,6,4,1,5,2,9,7
 
+You may also pass an optional `count` argument that specifies the number of random numbers to return eg:
+
+```
+let min = 0.2; 
+let max = 9.3;
+let count = 5;
+let arr = uniqueRandObj.getRandArr(min, max, count);
+console.log('unique random numbers = ' + arr);
+```
+sample output: 1,9,3,5,10
+
 ### JavaScript
 
 To use `UniqueRand.js` in your JavaScript project here is an example. Modify to suit your needs:
@@ -75,6 +86,17 @@ max = 10
 ```
 
 sample output: 8,0,10,3,6,4,1,5,2,9,7
+
+You may also pass an optional `count` argument that specifies the number of random numbers to return eg:
+
+```
+let min = 0.2; 
+let max = 9.3;
+let count = 5;
+let arr = uniqueRandObj.getRandArr(min, max, count);
+console.log('unique random numbers = ' + arr);
+```
+sample output: 1,9,3,5,10
 
 ## Testing Instructions
 
