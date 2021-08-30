@@ -2,6 +2,7 @@ v1.0.3 2021.8.30
 - updated package.json git URLs.
 - Added tsconfig.tsbuildinfo to .gitignore.
 - Added tsconfig.tsbuildinfo to .npmignore.
+- Changed name in package.json.
 
 v1.0.2 2021.8.30
 - UniqueRand.ts now uses static member functions.
