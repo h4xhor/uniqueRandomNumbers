@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/k50/unique-random-numbers.git"
+    "url": "https://github.com/h4xhor/uniqueRandomNumbers"
   },
   "keywords": [
     "unique",
@@ -26,7 +26,7 @@
   "author": "keansum@gmail.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://gitlab.com/k50/unique-random-numbers/issues"
+    "url": "https://github.com/h4xhor/uniqueRandomNumbers/issues"
   },
-  "homepage": "https://gitlab.com/k50/unique-random-numbers#readme"
+  "homepage": "https://github.com/h4xhor/uniqueRandomNumbers"
 }

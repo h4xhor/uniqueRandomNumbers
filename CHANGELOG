@@ -1,3 +1,6 @@
+v1.0.3 2021.8.30
+- updated package.json git URLs.
+
 v1.0.2 2021.8.30
 - UniqueRand.ts now uses static member functions.
 - Changed testing framework to Jest.
