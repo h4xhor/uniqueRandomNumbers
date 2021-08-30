@@ -1,6 +1,6 @@
 {
   "name": "uniquerand",
-  "version": "0.1.0",
+  "version": "1.0.4",
   "description": "Generate unique random numbers.",
   "main": "uniqueRand.js",
   "devDependencies": {
