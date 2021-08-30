@@ -1,6 +1,6 @@
 {
-  "name": "uniquerand",
-  "version": "1.0.2",
+  "name": "@kso/uniquerand",
+  "version": "0.1.0",
   "description": "Generate unique random numbers.",
   "main": "uniqueRand.js",
   "devDependencies": {

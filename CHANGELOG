@@ -3,6 +3,7 @@ v1.0.2 2021.8.30
 - Changed testing framework to Jest.
 - Updated README.md.
 - added .npmignore.
+- Changed name in package.json.
 
 v1.0.1 2021.8.24
 - Added count argument. 
