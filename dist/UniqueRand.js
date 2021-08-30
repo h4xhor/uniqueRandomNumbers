@@ -1,5 +1,5 @@
 'use strict';
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", { value: true });
 exports.UniqueRand = void 0;
 var UniqueRand = /** @class */ (function () {
     function UniqueRand() {
@@ -7,7 +7,7 @@ var UniqueRand = /** @class */ (function () {
     /* - returns a random number out of the universe
      * - removes it from the universe
      */
-    UniqueRand.prototype.getRand = function (universe) {
+    UniqueRand.getRand = function (universe) {
         var max = universe.length;
         var i = Math.floor(Math.random() * max);
         var number = universe[i];
@@ -16,7 +16,7 @@ var UniqueRand = /** @class */ (function () {
     };
     /* get array of random numbers between 0 and max - 1
      */
-    UniqueRand.prototype.getUniqueRand = function (arr, universe, max) {
+    UniqueRand.getUniqueRand = function (arr, universe, max) {
         if (0 == arr.length) {
             arr.push(this.getRand(universe));
             //console.log('first item ' + arr[0]);
@@ -26,7 +26,7 @@ var UniqueRand = /** @class */ (function () {
             arr.push(rand);
         }
     };
-    UniqueRand.prototype.getRandArr = function (min, max, count) {
+    UniqueRand.getRandArr = function (min, max, count) {
         var arr = [];
         if (min > max) {
         }

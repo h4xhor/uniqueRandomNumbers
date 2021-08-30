@@ -1,3 +1,9 @@
+v1.0.2 2021.8.30
+- UniqueRand.ts now uses static member functions.
+- Changed testing framework to Jest.
+- Updated README.md.
+- added .npmignore.
+
 v1.0.1 2021.8.24
 - Added count argument. 
 

@@ -5,7 +5,7 @@ export class UniqueRand {
   /* - returns a random number out of the universe
    * - removes it from the universe
    */
-  getRand(universe: number[]) {
+  static getRand(universe: number[]): number {
     let max = universe.length;
     let i = Math.floor(Math.random() * max)
     let number = universe[i];
@@ -15,7 +15,7 @@ export class UniqueRand {
 
   /* get array of random numbers between 0 and max - 1
    */
-  getUniqueRand(arr: number[], universe: number[], max: number) {
+  static getUniqueRand(arr: number[], universe: number[], max: number) {
     if (0 == arr.length) {
       arr.push(this.getRand(universe));
       //console.log('first item ' + arr[0]);
@@ -26,9 +26,9 @@ export class UniqueRand {
     }
   }
 
-  getRandArr(min: number, max: number, count?: number) {
+  static getRandArr(min: number, max: number, count?: number): number[] {
     
-    let arr = [];
+    let arr: number[] = [];
 
     if (min > max) {
 
