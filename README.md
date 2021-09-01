@@ -10,14 +10,28 @@ max = 8
 
 sample output: -3,-1,3,0,5,6,2,-4,-5,8,4,-2,1,7
 
+## Install Instructions
+
+Best way is to use `npm`:
+
+```
+npm i --save uniquerand
+```
+
 ## Usage Instructions
 
 ### TypeScript
 
+For TypeScript need `@types/node` to use `require()`:
+
+```
+npm i --save-dev @types/node
+```
+
 To use `UniqueRand.ts` in your TypeScript project here is an example. Modify to suit your needs:
 
 ```
-const { UniqueRand } = require('./UniqueRand');
+const { UniqueRand } = require("uniquerand");
 
 let min = -5;
 let max = 8;
@@ -61,7 +75,7 @@ sample output: 1,9,3,5,10
 To use `UniqueRand.js` in your JavaScript project here is an example. Modify to suit your needs:
 
 ```
-let UniqueRand = require('./UniqueRand').UniqueRand;
+let { UniqueRand } = require("uniquerand");
 
 let min = -5;
 let max = 8;
@@ -101,7 +115,8 @@ sample output: 1,9,3,5,10
 
 ## TypeScript Testing Instructions
 
-Install dependencies:
+Change directory to the module uniquerand then install dependencies:
+
 ```
 npm install
 ```
