@@ -11,6 +11,7 @@
     "typescript": "^4.4.2"
   },
   "scripts": {
+		"build": "npx tsc",
     "test": "jest src",
     "test:watch": "jest --watch src"
   },
@@ -23,7 +24,7 @@
     "random",
     "numbers"
   ],
-  "author": "keansum@gmail.com",
+  "author": "keansum@proton.me",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/h4xhor/uniqueRandomNumbers/issues"

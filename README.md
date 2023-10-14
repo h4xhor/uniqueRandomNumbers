@@ -72,6 +72,11 @@ sample output: 1,9,3,5,10
 
 ### JavaScript
 
+Make sure the `.js` files are up to date in the `dist` folder:
+```
+npm run build
+```
+
 To use `UniqueRand.js` in your JavaScript project here is an example. Modify to suit your needs:
 
 ```

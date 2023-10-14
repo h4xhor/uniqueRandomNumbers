@@ -17,36 +17,35 @@ var UniqueRand = /** @class */ (function () {
     /* get array of random numbers between 0 and max - 1
      */
     UniqueRand.getUniqueRand = function (arr, universe, max) {
-        if (0 == arr.length) {
-            arr.push(this.getRand(universe));
-            //console.log('first item ' + arr[0]);
-        }
-        else {
-            var rand = this.getRand(universe);
-            arr.push(rand);
-        }
+        arr.push(this.getRand(universe));
     };
     UniqueRand.getRandArr = function (min, max, count) {
         var arr = [];
         if (min > max) {
+            return arr;
+        }
+        min = Math.floor(min);
+        max = Math.ceil(max);
+        var universe = [];
+        var range = max - min + 1;
+        if (typeof count === "undefined") {
+            count = range;
         }
         else {
-            min = Math.floor(min);
-            max = Math.ceil(max);
-            var universe = [];
-            var range = max - min + 1;
-            if (typeof count === "undefined") {
-                count = range;
+            // Limit count to the maximum possible
+            var max_count = max - min + 1;
+            if (count > max_count) {
+                count = max_count;
             }
-            for (var i = 0; i < range; i++) {
-                universe.push(i);
-            }
-            for (var i = 0; i < count; i++) {
-                this.getUniqueRand(arr, universe, range);
-            }
-            for (var i = 0; i < count; i++) {
-                arr[i] += min;
-            }
+        }
+        for (var i = 0; i < range; i++) {
+            universe.push(i);
+        }
+        for (var i = 0; i < count; i++) {
+            this.getUniqueRand(arr, universe, range);
+        }
+        for (var i = 0; i < count; i++) {
+            arr[i] += min;
         }
         return arr;
     };
