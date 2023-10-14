@@ -133,93 +133,129 @@ Note: above is an alias to `jest src`.
   <summary>Click to show example test run.</summary>
 
 ```
+$ npm run test
+
+> uniquerand@1.0.6 test
+> jest src
+
  PASS  src/uniqueRand.test.ts
-  ✓ all (59 ms)
+  ✓ all (46 ms)
 
   console.log
     runSingleTest(1, 1) = [1] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
     runSingleTest(1, 2) = [1,2] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
     runSingleTest(1, 3) = [3,1,2] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(0, 10) = [6,1,9,0,8,10,2,4,7,5,3] ... Passed
+    runSingleTest(0, 10) = [9,4,0,10,5,6,1,3,2,7,8] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
-
-  console.log
-    runSingleTest(0.2, 9.3) = [4,1,3,0,7,9,8,2,10,6,5] ... Passed
-
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(-0.2, 9.3) = [3,-1,1,10,7,9,5,6,8,4,2,0] ... Passed
+    runSingleTest(0.2, 9.3) = [5,3,8,9,10,1,2,4,0,6,7] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
-
-  console.log
-    runSingleTest(-20.2, -9.3) = [-10,-14,-13,-19,-16,-11,-12,-9,-20,-17,-21,-18,-15] ... Passed
-
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(-5, 8) = [-5,6,5,3,7,-4,-1,-2,0,4,2,1,8,-3] ... Passed
+    runSingleTest(-0.2, 9.3) = [9,5,2,0,10,-1,7,8,3,4,6,1] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
-
-  console.log
-    runSingleTest(1, 15) = [15,13,1,9,3,5,4,8,11,2,6,12,14,7,10] ... Passed
-
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(5, 95) = [49,55,31,37,16,48,47,22,95,36,12,8,50,39,84,79,45,69,94,60,71,14,17,33,40,27,44,67,21,52,43,85,92,9,6,76,20,23,77,82,53,87,24,41,42,62,18,65,28,26,30,29,80,90,89,68,35,51,46,19,78,11,25,34,56,81,61,15,38,64,54,63,5,70,32,57,73,83,66,75,7,86,59,13,93,58,74,88,10,91,72] ... Passed
+    runSingleTest(-20.2, -9.3) = [-11,-18,-15,-19,-16,-12,-13,-20,-21,-14,-9,-10,-17] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:60:13)
-
-  console.log
-    runSingleTest(0, 10, 5) = [0,4,8,3,5] ... Passed
-
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(0.2, 9.3, 5) = [5,2,0,10,3] ... Passed
+    runSingleTest(-5, 8) = [-2,3,5,-3,2,7,0,-1,4,1,8,-5,6,-4] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
-
-  console.log
-    runSingleTest(-0.2, 9.3, 5) = [9,8,5,1,-1] ... Passed
-
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(-20.2, -9.3, 5) = [-20,-10,-19,-13,-17] ... Passed
+    runSingleTest(1, 15) = [13,10,5,4,7,11,9,8,15,12,14,2,1,6,3] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
-
-  console.log
-    runSingleTest(-5, 8, 5) = [-2,4,5,0,6] ... Passed
-
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(1, 15, 6) = [7,3,8,11,2,6] ... Passed
+    runSingleTest(5, 95) = [9,41,34,14,67,93,17,69,76,5,15,88,74,50,8,57,83,72,75,19,45,28,26,25,22,20,35,23,49,40,92,33,84,53,80,61,77,31,82,16,64,48,12,65,32,10,56,43,6,51,36,37,39,70,44,94,73,90,59,24,89,47,66,30,91,60,13,29,18,71,95,58,81,78,55,11,27,68,52,86,54,87,46,38,85,7,79,63,62,21,42] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
+      at runSingleTest (src/uniqueRand.test.ts:73:13)
 
   console.log
-    runSingleTest(5, 95, 8) = [52,20,29,35,90,45,83,78] ... Passed
+    runSingleTest(0, 10, 5) = [9,7,3,10,2] ... Passed
 
-      at runSingleTest (src/uniqueRand.test.ts:58:13)
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(0.2, 9.3, 5) = [6,3,0,7,4] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(-0.2, 9.3, 5) = [8,0,10,6,-1] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(-20.2, -9.3, 5) = [-10,-17,-15,-18,-20] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(-5, 8, 5) = [-5,0,2,7,5] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(1, 15, 6) = [5,7,8,4,15,14] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(5, 95, 8) = [23,50,77,37,74,75,30,84] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(1, 5, 6) = [2,3,4,5,1] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(-2, 5, 88) = [3,2,-2,0,4,-1,5,1] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(1, 5, -8) = [] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(-8, 5, -8) = [] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+  console.log
+    runSingleTest(8, -1, -8) = [] ... Passed
+
+      at runSingleTest (src/uniqueRand.test.ts:71:13)
+
+Test Suites: 1 passed, 1 total
+Tests:       1 passed, 1 total
+Snapshots:   0 total
+Time:        1.369 s, estimated 2 s
+Ran all test suites matching /src/i.
 ```
 </details>
  
