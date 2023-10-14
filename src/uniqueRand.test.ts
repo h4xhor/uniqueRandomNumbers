@@ -24,13 +24,17 @@ function isUnique(arr: number[], min: number, max: number): boolean {
       break;
     }
 
-    for (let j = 0; j < i; j++) {
+		let count = 0;
+    for (let j = 0; j < arr.length; j++) {
       if (n == arr[j]) {
-        console.log(n + ' repeats.')
-        ok = false;
-        break;
+				count++;
       }
     }
+
+		if (count > 1) {
+			console.log(n + ' repeats ' + count + ' times.')
+			ok = false;
+		}
   }
 
   return ok;
@@ -39,10 +43,12 @@ function isUnique(arr: number[], min: number, max: number): boolean {
 function runSingleTest(min: number, max: number, count?: number) {
 
   let hasCount: boolean;
+
+	let min2 = Math.floor(min);
+	let max2 = Math.ceil(max);
+	let range = max2 - min2 + 1;
+
   if (typeof count === "undefined") {
-    let min2 = Math.floor(min);
-    let max2 = Math.ceil(max);
-    let range = max2 - min2 + 1;
     count = range;
 
     hasCount = false;
@@ -52,7 +58,14 @@ function runSingleTest(min: number, max: number, count?: number) {
 
   let arr = UniqueRand.getRandArr(min, max, count);
   let ok = isUnique(arr, min, max);
-  ok = ok && (arr.length === count)
+
+	if (count < 0) {
+		ok = ok && (arr.length === 0)
+	} else if (count > range) {
+		ok = ok && (arr.length === range)
+	} else {
+		ok = ok && (arr.length === count)
+	}
 
   if (hasCount) {
     console.log(`runSingleTest(${min}, ${max}, ${count}) = [${arr}] ... ${ok ? "Passed" : "Failed"}` );
@@ -82,5 +95,20 @@ test("all", () => {
   expect(runSingleTest(-5, 8, 5)).toBe(true);
   expect(runSingleTest(1, 15, 6)).toBe(true);
   expect(runSingleTest(5, 95, 8)).toBe(true);
+
+	// test count is > max - min + 1
+  expect(runSingleTest(1, 5, 6)).toBe(true);
+
+	// test count is > max - min + 1, with negative min
+  expect(runSingleTest(-2, 5, 88)).toBe(true);
+
+	// test count is < 0 
+  expect(runSingleTest(1, 5, -8)).toBe(true);
+
+	// test count is < 0, with negative min
+  expect(runSingleTest(-8, 5, -8)).toBe(true);
+
+	// test max < min
+  expect(runSingleTest(8, -1, -8)).toBe(true);
 });
 
