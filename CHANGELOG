@@ -1,3 +1,11 @@
+v1.0.6 2023.10.14
+    * Removed redundant code in getUniqueRand().
+    * Fixed bug in isUnique.
+    * Fixed bug in getRandArr() with count exceeding max - min + 1.
+    * Fixed bug in isUnique() not testing correctly for uniqueness.
+    * Added to runSingleTest() checks for negative count and count exceeding max - min + 1.
+    * Added to runSingleTest() test cases for negative count and count exceeding max - min + 1.
+
 v1.0.5 2021.9.2
 - Updated package.json main field to point to "dist/UniqueRand.js".
 - Updated README.md for npm instructions.
